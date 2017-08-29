@@ -3,7 +3,6 @@ var imgCurrent = 1;
 var imgWidth;
 var animate;
 var slider;
-var stop;
 
 document.addEventListener('DOMContentLoaded', function(){ init(); });
 
@@ -48,7 +47,6 @@ function moveLeft() {
 function moveRight() {
 	slider.style.marginLeft = parseInt(slider.style.marginLeft) + imgWidth + 'px';
 	imgCurrent--;
-	console.log(imgCurrent);
 	if(imgCurrent < 1) {
 		imgCurrent = imgNumber;
 		slider.style.marginLeft = -(imgTotalWidth - imgWidth) + 'px';
