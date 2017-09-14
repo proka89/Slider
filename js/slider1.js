@@ -44,7 +44,7 @@ function moveRight() {
 	if(imgCurrent < 0) {
 		imgCurrent = imgNumber - 1;
 		slider.style.marginLeft = -(imgTotalWidth - imgWidth) + 'px';
-	}else {
+	} else {
 		slider.style.marginLeft = parseInt(slider.style.marginLeft) + imgWidth + 'px';
 	}
 }
