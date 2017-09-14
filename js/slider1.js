@@ -8,14 +8,18 @@ document.addEventListener('DOMContentLoaded', function(){ init(); });
 
 function init() {
 	slider = document.getElementById("slides");
+	leftArrow = document.getElementById("left");
+	rightArrow = document.getElementById("right");
 	imgList = slider.children;
 	imgNumber = imgList.length;
 	imgWidth = imgList[0].children[0].width;
 	imgTotalWidth = imgWidth * imgNumber;
 	document.getElementById("left").onclick = function() {moveLeft()};
 	document.getElementById("right").onclick = function() {moveRight()};
-	slider.addEventListener("mouseover", stopAutoSlide, false);
-	slider.addEventListener("mouseout", startSlider, false);
+	leftArrow.addEventListener("mouseover", stopAutoSlide, false);
+	leftArrow.addEventListener("mouseout", startSlider, false);
+	rightArrow.addEventListener("mouseover", stopAutoSlide, false);
+	rightArrow.addEventListener("mouseout", startSlider, false);
 	startSlider();
 }
 
