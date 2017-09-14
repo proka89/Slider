@@ -34,8 +34,10 @@ function moveLeft() {
 	if(imgCurrent >= imgNumber) {
 		imgCurrent = 0;
 		slider.style.marginLeft = '0px';
+		slider.style.webkitTransition = 'none';
 	} else {
 		slider.style.marginLeft = parseInt(slider.style.marginLeft) - imgWidth + 'px';
+		slider.style.webkitTransition = '400ms linear';
 	}
 }
 
@@ -44,7 +46,9 @@ function moveRight() {
 	if(imgCurrent < 0) {
 		imgCurrent = imgNumber - 1;
 		slider.style.marginLeft = -(imgTotalWidth - imgWidth) + 'px';
+		slider.style.webkitTransition = 'none';
 	} else {
 		slider.style.marginLeft = parseInt(slider.style.marginLeft) + imgWidth + 'px';
+		slider.style.webkitTransition = '400ms linear';
 	}
 }
